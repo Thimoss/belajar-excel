@@ -2,18 +2,18 @@
 
 ## Tentang Project
 
-Website kelas online untuk belajar Microsoft Excel dari dasar sampai mahir, dibuat dengan Next.js 16.
+Website kelas online untuk belajar Microsoft Excel dari dasar sampai mahir, dibuat dengan Next.js.
 
 ## Screenshots
 
 ### Home Page
-![Home page](/home/thimoti/.gemini/antigravity/brain/542a95a2-1598-4022-8ebc-03d1c0726455/.system_generated/click_feedback/click_feedback_1770279327020.png)
+![Home page](./screenshots/home_page.png)
 
 ### Daftar Pelajaran
-![Lessons page](/home/thimoti/.gemini/antigravity/brain/542a95a2-1598-4022-8ebc-03d1c0726455/.system_generated/click_feedback/click_feedback_1770279349568.png)
+![Lessons page](./screenshots/lessons_page.png)
 
 ### Detail Pelajaran dengan Transkrip
-![Lesson detail](/home/thimoti/.gemini/antigravity/brain/542a95a2-1598-4022-8ebc-03d1c0726455/.system_generated/click_feedback/click_feedback_1770279470525.png)
+![Lesson detail](./screenshots/lesson_detail.png)
 
 ---
 
@@ -41,8 +41,18 @@ Website kelas online untuk belajar Microsoft Excel dari dasar sampai mahir, dibu
 - Filter berdasarkan kategori
 - Fitur pencarian
 
+### 📐 Halaman Rumus
+- 116+ rumus Excel lengkap
+- 9 kategori: Matematika, Logika, Teks, Lookup, Tanggal, Kondisional, Informasi, Array, Finansial
+- Sintaks, contoh, dan penjelasan Bahasa Indonesia
+
+### 📖 Kamus Excel
+- 39 istilah Excel dengan definisi
+- Dikelompokkan berdasarkan kategori
+
 ### 🎨 Design
-- Dark theme dengan aksen hijau Excel (#217346)
+- Dark & Light theme dengan toggle
+- Aksen hijau Excel (#217346)
 - Glassmorphism effects
 - Responsive untuk mobile
 
@@ -50,7 +60,7 @@ Website kelas online untuk belajar Microsoft Excel dari dasar sampai mahir, dibu
 
 ## Demo
 
-![Demo navigasi website](/home/thimoti/.gemini/antigravity/brain/542a95a2-1598-4022-8ebc-03d1c0726455/excel_website_demo_1770279267084.webp)
+![Demo navigasi website](./screenshots/demo.webp)
 
 ---
 
@@ -64,11 +74,16 @@ excel-belajar/
 │   ├── pelajaran/
 │   │   ├── page.tsx          # Lesson list
 │   │   └── [slug]/page.tsx   # Lesson detail
+│   ├── rumus/page.tsx        # Formulas reference
+│   ├── kamus/page.tsx        # Excel glossary
 │   └── shortcuts/page.tsx    # Shortcuts page
 ├── components/               # React components
 ├── data/
 │   ├── lessons.ts            # Lesson content
-│   └── shortcuts.ts          # Shortcuts data
+│   ├── shortcuts.ts          # Shortcuts data
+│   ├── formulas.ts           # Formulas data
+│   └── glossary.ts           # Glossary data
+└── docs/                     # Documentation & screenshots
 ```
 
 ## Sumber Materi
