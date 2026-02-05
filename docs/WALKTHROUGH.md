@@ -4,16 +4,7 @@
 
 Website kelas online untuk belajar Microsoft Excel dari dasar sampai mahir, dibuat dengan Next.js.
 
-## Screenshots
-
-### Home Page
-![Home page](./screenshots/home_page.png)
-
-### Daftar Pelajaran
-![Lessons page](./screenshots/lessons_page.png)
-
-### Detail Pelajaran dengan Transkrip
-![Lesson detail](./screenshots/lesson_detail.png)
+**Live Demo**: Jalankan `npm run dev` untuk melihat website secara lokal.
 
 ---
 
@@ -58,12 +49,6 @@ Website kelas online untuk belajar Microsoft Excel dari dasar sampai mahir, dibu
 
 ---
 
-## Demo
-
-![Demo navigasi website](./screenshots/demo.webp)
-
----
-
 ## Struktur File
 
 ```
@@ -83,7 +68,19 @@ excel-belajar/
 │   ├── shortcuts.ts          # Shortcuts data
 │   ├── formulas.ts           # Formulas data
 │   └── glossary.ts           # Glossary data
-└── docs/                     # Documentation & screenshots
+└── docs/                     # Documentation
+```
+
+## Cara Menjalankan
+
+```bash
+# Install dependencies
+npm install
+
+# Jalankan development server
+npm run dev
+
+# Buka http://localhost:3000
 ```
 
 ## Sumber Materi
