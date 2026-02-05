@@ -1,0 +1,128 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: var(--space-md) var(--space-lg);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    transition: opacity var(--transition-fast);
+}
+
+.logo:hover {
+    opacity: 0.9;
+}
+
+.logoIcon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-gradient);
+    border-radius: var(--radius-md);
+    color: white;
+}
+
+.logoIcon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.logoText span {
+    color: var(--primary-light);
+}
+
+.rightSection {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.menuButton {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: var(--space-xs);
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all var(--transition-fast);
+}
+
+.navLink:hover {
+    color: var(--text-primary);
+    background: var(--surface);
+}
+
+.navLink.active {
+    color: var(--primary-light);
+    background: rgba(33, 115, 70, 0.15);
+}
+
+@media (max-width: 768px) {
+    .menuButton {
+        display: flex;
+    }
+
+    .navLinks {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        flex-direction: column;
+        align-items: stretch;
+        padding: var(--space-lg);
+        background: var(--background);
+        gap: var(--space-sm);
+        transform: translateX(100%);
+        transition: transform var(--transition-normal);
+    }
+
+    .navLinks.open {
+        transform: translateX(0);
+    }
+
+    .navLink {
+        padding: var(--space-md);
+        font-size: 1rem;
+        border: 1px solid var(--border);
+    }
+}

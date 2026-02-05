@@ -1,0 +1,32 @@
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-2xl) var(--space-lg);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.header h1 {
+    margin-bottom: var(--space-md);
+}
+
+.header p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.lessonsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: var(--space-lg);
+}
+
+@media (max-width: 768px) {
+    .lessonsGrid {
+        grid-template-columns: 1fr;
+    }
+}

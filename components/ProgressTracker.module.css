@@ -1,0 +1,73 @@
+.tracker {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgba(234, 179, 8, 0.15);
+    border-radius: var(--radius-md);
+    color: var(--warning);
+}
+
+.info {
+    flex-grow: 1;
+}
+
+.info h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.info p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.percentage {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-light);
+}
+
+.progressBar {
+    width: 100%;
+    height: 8px;
+    background: var(--background-secondary);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background: var(--primary-gradient);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.completed {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    background: rgba(34, 197, 94, 0.15);
+    border-radius: var(--radius-md);
+    color: var(--success);
+    font-size: 0.9rem;
+}

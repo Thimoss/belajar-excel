@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Excel Belajar
 
-## Getting Started
+Platform belajar Microsoft Excel dari dasar sampai mahir dalam Bahasa Indonesia.
 
-First, run the development server:
+## ✨ Fitur
+
+- 📚 **6 Pelajaran Terstruktur** - Dari pengenalan interface sampai masterclass
+- 🎥 **Video Tutorial** - Embed YouTube dari tutorial berkualitas
+- 📝 **Transkrip Lengkap** - Materi tertulis dalam Bahasa Indonesia
+- ⌨️ **60+ Keyboard Shortcuts** - Database shortcuts yang bisa dicari dan difilter
+- 📊 **Progress Tracking** - Tandai pelajaran yang sudah selesai
+- 🎨 **Dark Mode** - Design modern dengan aksen hijau Excel
+
+## 🚀 Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Jalankan development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka [http://localhost:3000](http://localhost:3000) di browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📖 Daftar Pelajaran
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Episode | Topik | Durasi |
+|---------|-------|--------|
+| 1 | Pengenalan Interface Excel | 10:04 |
+| 2 | Formatting Data & Sel | 10:22 |
+| 3 | Rumus Aritmatika Dasar | 11:39 |
+| 4 | Fungsi Statistik (SUM, AVERAGE, MIN, MAX, COUNT) | 11:34 |
+| 5 | Praktik & Latihan | 14:22 |
+| Bonus | Tutorial Lengkap (Masterclass) | 1:38:25 |
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: CSS Modules
+- **Icons**: Lucide React
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+├── app/
+│   ├── page.tsx              # Home
+│   ├── pelajaran/            # Lessons
+│   └── shortcuts/            # Shortcuts
+├── components/               # UI Components
+├── data/                     # Content
+│   ├── lessons.ts
+│   └── shortcuts.ts
+└── docs/                     # Documentation
+```
 
-## Deploy on Vercel
+## 📝 Dokumentasi
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Lihat [docs/WALKTHROUGH.md](docs/WALKTHROUGH.md) untuk dokumentasi lengkap dengan screenshots.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📚 Sumber Materi
+
+Website ini menggunakan materi dari:
+- [Playlist: Belajar Excel Dari Nol](https://youtube.com/playlist?list=PLh4cGGFoAFualkAyD-kb42hkyGYzaj1BB) oleh Ignasius Ryan
+- [Tutorial Lengkap Excel](https://youtu.be/310z5K14JXw)
+
+---
+
+Made with ❤️ untuk belajar Excel

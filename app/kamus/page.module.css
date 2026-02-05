@@ -1,0 +1,232 @@
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-2xl) var(--space-lg);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.headerIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: var(--primary-gradient);
+    border-radius: var(--radius-lg);
+    color: white;
+    margin-bottom: var(--space-lg);
+}
+
+.header h1 {
+    margin-bottom: var(--space-md);
+}
+
+.header p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.searchBox {
+    position: relative;
+    max-width: 400px;
+}
+
+.searchIcon {
+    position: absolute;
+    left: var(--space-md);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.searchInput {
+    width: 100%;
+    padding: var(--space-md) var(--space-md) var(--space-md) 44px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    transition: all var(--transition-fast);
+}
+
+.searchInput::placeholder {
+    color: var(--text-muted);
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(33, 115, 70, 0.2);
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.filterBtn {
+    padding: var(--space-sm) var(--space-md);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.filterBtn:hover {
+    border-color: var(--border-light);
+    color: var(--text-primary);
+}
+
+.filterBtn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+/* Results Info */
+.resultsInfo {
+    margin-bottom: var(--space-lg);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Glossary Container */
+.glossaryContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xl);
+}
+
+.categorySection {
+    /* Section styling */
+}
+
+.categoryTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--primary);
+    display: inline-block;
+}
+
+.termsList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.termCard {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: all var(--transition-fast);
+}
+
+.termCard:hover {
+    border-color: var(--primary);
+}
+
+.termCard.expanded {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-md);
+}
+
+.termHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: var(--space-md) var(--space-lg);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.termHeader:hover {
+    color: var(--primary-light);
+}
+
+.termName {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.termContent {
+    display: none;
+    padding: 0 var(--space-lg) var(--space-lg);
+}
+
+.termCard.expanded .termContent {
+    display: block;
+}
+
+.definition {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: var(--space-sm);
+}
+
+.example {
+    display: flex;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--background);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+}
+
+.exampleLabel {
+    color: var(--primary-light);
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.example span:last-child {
+    color: var(--text-secondary);
+}
+
+/* No Results */
+.noResults {
+    text-align: center;
+    padding: var(--space-3xl);
+    color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .filters {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: var(--space-sm);
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .filterBtn {
+        flex-shrink: 0;
+    }
+}

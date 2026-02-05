@@ -1,0 +1,212 @@
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-2xl) var(--space-lg);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.headerIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: var(--primary-gradient);
+    border-radius: var(--radius-lg);
+    color: white;
+    margin-bottom: var(--space-lg);
+}
+
+.header h1 {
+    margin-bottom: var(--space-md);
+}
+
+.header p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.searchBox {
+    position: relative;
+    max-width: 400px;
+}
+
+.searchIcon {
+    position: absolute;
+    left: var(--space-md);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.searchInput {
+    width: 100%;
+    padding: var(--space-md) var(--space-md) var(--space-md) 44px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    transition: all var(--transition-fast);
+}
+
+.searchInput::placeholder {
+    color: var(--text-muted);
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(33, 115, 70, 0.2);
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.filterBtn {
+    padding: var(--space-sm) var(--space-md);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.filterBtn:hover {
+    border-color: var(--border-light);
+    color: var(--text-primary);
+}
+
+.filterBtn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+/* Results Info */
+.resultsInfo {
+    margin-bottom: var(--space-lg);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Shortcuts Container */
+.shortcutsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xl);
+}
+
+.categorySection {
+    /* Section styling */
+}
+
+.categoryTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--primary);
+    display: inline-block;
+}
+
+.shortcutsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-md);
+}
+
+.shortcutCard {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-lg);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.shortcutCard:hover {
+    border-color: var(--primary);
+    background: var(--surface-hover);
+}
+
+.keys {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+}
+
+.kbd {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    padding: 6px 10px;
+    background: linear-gradient(180deg, var(--surface-hover) 0%, var(--background-secondary) 100%);
+    border: 1px solid var(--border-light);
+    border-bottom-width: 3px;
+    border-radius: var(--radius-sm);
+    font-family: 'Inter', monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
+.plus {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0 2px;
+}
+
+.description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* No Results */
+.noResults {
+    text-align: center;
+    padding: var(--space-3xl);
+    color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .shortcutsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: var(--space-sm);
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .filterBtn {
+        flex-shrink: 0;
+    }
+}

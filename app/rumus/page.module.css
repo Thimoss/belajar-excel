@@ -1,0 +1,408 @@
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-2xl) var(--space-lg);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.headerIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: var(--primary-gradient);
+    border-radius: var(--radius-lg);
+    color: white;
+    margin-bottom: var(--space-lg);
+}
+
+.header h1 {
+    margin-bottom: var(--space-md);
+}
+
+.header p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Controls */
+.controls {
+    margin-bottom: var(--space-lg);
+}
+
+.searchBox {
+    position: relative;
+    max-width: 500px;
+    margin-bottom: var(--space-lg);
+}
+
+.searchIcon {
+    position: absolute;
+    left: var(--space-md);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.searchInput {
+    width: 100%;
+    padding: var(--space-md) var(--space-md) var(--space-md) 44px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    transition: all var(--transition-fast);
+}
+
+.searchInput::placeholder {
+    color: var(--text-muted);
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(33, 115, 70, 0.2);
+}
+
+.filterSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.filterGroup {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+}
+
+.filterLabel {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    min-width: 80px;
+    padding-top: var(--space-sm);
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.filterBtn {
+    padding: var(--space-xs) var(--space-sm);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.filterBtn:hover {
+    border-color: var(--border-light);
+    color: var(--text-primary);
+}
+
+.filterBtn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+/* Results Info */
+.resultsInfo {
+    margin-bottom: var(--space-lg);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--surface);
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+/* Formulas Container */
+.formulasContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xl);
+}
+
+.categorySection {
+    scroll-margin-top: 100px;
+}
+
+.categoryTitle {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-sm);
+    border-bottom: 2px solid var(--primary);
+}
+
+.categoryCount {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 2px 8px;
+    background: rgba(33, 115, 70, 0.2);
+    color: var(--primary-light);
+    border-radius: var(--radius-sm);
+}
+
+.formulasList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.formulaCard {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: all var(--transition-fast);
+}
+
+.formulaCard:hover {
+    border-color: var(--primary);
+}
+
+.formulaCard.expanded {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-md);
+}
+
+.formulaHeader {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    width: 100%;
+    padding: var(--space-md) var(--space-lg);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+.formulaHeader>svg {
+    position: absolute;
+    right: var(--space-lg);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.formulaHeader:hover {
+    background: rgba(33, 115, 70, 0.05);
+}
+
+.formulaTitle {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.formulaTitle h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-light);
+}
+
+.difficultyBadge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+}
+
+.difficultyBasic {
+    background: rgba(34, 197, 94, 0.2);
+    color: var(--success);
+}
+
+.difficultyMedium {
+    background: rgba(234, 179, 8, 0.2);
+    color: var(--warning);
+}
+
+.difficultyAdvanced {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--danger);
+}
+
+.formulaPreview {
+    padding-right: 40px;
+}
+
+.formulaPreview code {
+    font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.formulaContent {
+    display: none;
+    padding: 0 var(--space-lg) var(--space-lg);
+    border-top: 1px solid var(--border);
+}
+
+.formulaCard.expanded .formulaContent {
+    display: block;
+    padding-top: var(--space-md);
+}
+
+.description {
+    margin-bottom: var(--space-md);
+}
+
+.description p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.syntaxSection,
+.exampleSection {
+    margin-top: var(--space-md);
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--space-sm);
+}
+
+.copyBtn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-xs) var(--space-sm);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.copyBtn:hover {
+    border-color: var(--primary);
+    color: var(--primary-light);
+}
+
+.syntaxCode {
+    background: var(--background);
+    padding: var(--space-md);
+    border-radius: var(--radius-sm);
+    overflow-x: auto;
+    font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+    font-size: 0.9rem;
+    color: var(--primary-light);
+}
+
+.exampleBox {
+    background: var(--background);
+    padding: var(--space-md);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--primary);
+}
+
+.exampleCode {
+    display: block;
+    font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+    font-size: 0.9rem;
+    color: var(--primary-light);
+    margin-bottom: var(--space-xs);
+}
+
+.exampleResult {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* No Results */
+.noResults {
+    text-align: center;
+    padding: var(--space-3xl);
+    color: var(--text-muted);
+}
+
+.noResults svg {
+    margin-bottom: var(--space-md);
+    opacity: 0.5;
+}
+
+.noResults p {
+    margin-bottom: var(--space-lg);
+}
+
+.resetBtn {
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--primary);
+    border: none;
+    border-radius: var(--radius-md);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.resetBtn:hover {
+    background: var(--primary-dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filterGroup {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filterLabel {
+        min-width: auto;
+        padding-top: 0;
+    }
+
+    .filters {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: var(--space-sm);
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+    }
+
+    .filterBtn {
+        flex-shrink: 0;
+    }
+
+    .formulaHeader {
+        padding-right: 50px;
+    }
+}
